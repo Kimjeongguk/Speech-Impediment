@@ -23,8 +23,10 @@ public class MainActivity extends AppCompatActivity {
         ImageButton b2 = (ImageButton)findViewById(R.id.t22);
         ImageButton b3 = (ImageButton)findViewById(R.id.t33);
         ImageButton b4 = (ImageButton)findViewById(R.id.t44);
-
-
+        ImageButton b11 = (ImageButton)findViewById(R.id.img1);
+        ImageButton b22 = (ImageButton)findViewById(R.id.img2);
+        ImageButton b33 = (ImageButton)findViewById(R.id.img3);
+        ImageButton b44 = (ImageButton)findViewById(R.id.img4);
 
         sound = new SoundPool(4, AudioManager.STREAM_MUSIC,0);
 
@@ -35,20 +37,40 @@ public class MainActivity extends AppCompatActivity {
 
         b1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                sound.play(soundID1,1,1,0,0,0);
+                sound.play(soundID1,1,1,0,0,1.0f);
             }
         });
         b2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                sound.play(soundID2,1,1,0,0,0);
+                sound.play(soundID2,1,1,0,0,1.0f);
             }
         });
         b3.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                sound.play(soundID3,1,1,0,0,0);
+                sound.play(soundID3,1,1,0,0,1.0f);
             }
         });
         b4.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                sound.play(soundID4,1,1,0,0,1.0f);
+            }
+        });
+        b11.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                sound.play(soundID1,1,1,0,0,0);
+            }
+        });
+        b22.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                sound.play(soundID2,1,1,0,0,0);
+            }
+        });
+        b33.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                sound.play(soundID3,1,1,0,0,0);
+            }
+        });
+        b44.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 sound.play(soundID4,1,1,0,0,0);
             }
